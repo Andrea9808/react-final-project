@@ -1,0 +1,62 @@
+.btn-sidebar {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    padding: 5px 15px;
+    font-size: 1.5rem;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.btn-sidebar:hover {
+    transform: rotate(90deg); 
+}
+
+// bottone di chiusura offcanvas
+.close-btn {
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: rgb(57, 59, 49);
+    cursor: pointer;
+    transition: color 0.3s ease;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        color: red;
+        transform: rotate(180deg); 
+    }
+}
+
+//titolo offcanvas
+
+.title-offcanvas {
+    font-size: 1.5rem;
+    color: orange;
+    margin-bottom: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.offcanvas{
+    box-shadow: 0 0 10px #000;
+    border-radius: 15px 0px 0px 15px;
+    background: rgb(191,127,79);
+    background: linear-gradient(90deg, rgba(191,127,79,1) 40%, rgba(92,102,32,1) 100%, rgba(121,112,9,1) 100%);
+    padding: 20px;
+}
+
+
+
+.nav-icon {
+    font-size: 1.5rem;
+    color: #000;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: orange;
+    }
+}

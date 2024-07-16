@@ -1,4 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'; 
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+
 // imprto i componenti NAVBAR, SIDEBAR, FOOTER
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
@@ -19,7 +21,6 @@ function App() {
   return (
     <Router className="App">
       <Navbar/>
-      <Sidebar/>
       <Routes>
         <Route path="/" element={<HomeScreen/>}/>
         <Route path="/about" element={<AboutScreen/>}/>
