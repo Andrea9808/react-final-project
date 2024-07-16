@@ -1,0 +1,18 @@
+.btn-return {
+    text-decoration: none;
+    background-color: #333;
+    color: white; 
+    font-weight: bold; 
+    padding: 5px 10px; 
+    border: 2px solid #333; 
+    border-radius: 22px; 
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: black; 
+        background-color: white; 
+
+    }
+}
+
+
