@@ -3,8 +3,11 @@ import { LinkComponent, SocialComponent } from "../utils/links";
 import { VscArrowSmallLeft } from "react-icons/vsc";
 import { FaBars } from 'react-icons/fa';
 import '../style/sidebar.scss';
+import { useGlobalContext } from "../context";
 
 const Sidebar = () => {
+
+
   return (
     <aside>
     <button className="btn-sidebar" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
@@ -20,7 +23,7 @@ const Sidebar = () => {
       </div>
       <hr style={{ background: "white", height: "3px", margin: "0" }} />
       <div className="offcanvas-body">
-        <div className="my-5">
+        <div className="my-5"  data-bs-dismiss="offcanvas" >
           <LinkComponent  />
         </div>
         <div>

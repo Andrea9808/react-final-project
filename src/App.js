@@ -3,7 +3,6 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 // imprto i componenti NAVBAR, SIDEBAR, FOOTER
 import Navbar from './components/Navbar';
-import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
 
 //importo le varie pagine

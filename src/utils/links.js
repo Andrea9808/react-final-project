@@ -8,6 +8,7 @@ import {
   FaYoutubeSquare,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useGlobalContext } from "../context";
 
 const links = [
   {
@@ -28,6 +29,8 @@ const links = [
 ];
 
 const LinkComponent = ({ classLink }) => {
+
+
   return (
     <ul className={classLink}>
       {links.map((link) => {
