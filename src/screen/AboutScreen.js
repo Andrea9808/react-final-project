@@ -1,6 +1,6 @@
 import React from 'react'
 import '../style/about_screen.scss'
-import { valueCards } from '../utils/info'
+import { valueCards, teamCards } from '../utils/info'
 import image from '../images/bg_about.jpg'
 import bg_team from '../images/bg_team.jpg'
 import Card from '../components/Card'
@@ -44,6 +44,18 @@ const AboutScreen = () => {
          }}>
 
          </div>
+      </section>
+      <section className='container'>
+        <h3 className='scope-title'>Il nostro Team</h3>
+        <div className='row'>
+          {
+            teamCards.map((card) => (
+              <div className='col-12 col-md-3 mb-5'>
+                <Card key={card.title} {...card} />
+              </div>
+            ))
+          }
+        </div>
       </section>
     </>
   )

@@ -24,27 +24,23 @@ export const valueCards = [
 
 export const teamCards = [
   {
-    title: "Dennis Rodman",
-    img:
-      "https://sportnews.snai.it/wp-content/uploads/2020/05/GettyImages-625824450.jpg",
-    subtitle: "CEO & Founder",
+    title: "Michel Ancel",
+    img: "https://areajugones.sport.es/wp-content/uploads/2020/09/michael-ancel-1080x609.jpg",
+    subtitle: "Fondatore di Ubisoft e creatore di Rayman e Beyond Good & Evil",
   },
   {
-    title: "Tatyana Doglieva",
-    img:
-      "https://i1.wp.com/alabanza.ru/wp-content/uploads/2018/04/Instagram-i-Vikipediya-Tatyany-Dogilevoj-foto.jpg",
-    subtitle: "CTO",
+    title: "Faker",
+    img: "https://cdn.theathletic.com/app/uploads/2022/11/03142800/52464300548_77cbf958db_6k-scaled-e1667514253895.jpg",
+    subtitle: "Pro Player di League of Legends",
   },
   {
-    title: "Charlie Sheen",
-    img:
-      "https://www.ecodelcinema.com/wp-content/uploads/2013/10/Charlie-Sheen.png",
-    subtitle: "Stakeholder & Testimonial",
+    title: "Hideo Kojima",
+    img: "https://pbs.twimg.com/profile_images/914211724412166144/Bf2Yij9b.jpg",
+    subtitle: "Game Developer e creatore di Metal Gear Solid",
   },
   {
-    title: "Shia Lebeouf",
-    img:
-      "https://www.corriere.it/methode_image/2021/01/15/Moda/Foto%20Moda/8%20shia%20labeouf.jpg",
-    subtitle: "Creative Director",
+    title: "Phil Spencer",
+    img: "https://exputer.com/wp-content/uploads/2020/09/phil-spencer.jpeg",
+    subtitle: "Director di Xbox",
   },
 ];
