@@ -1,24 +1,24 @@
-import { IoSchool, IoPeopleCircleSharp } from "react-icons/io5";
+import { IoGameController, IoPeople, IoServer } from 'react-icons/io5';
 import { ImDatabase } from "react-icons/im";
 
 export const valueCards = [
   {
-    title: "Educare",
-    icon: <IoSchool className="icon card-icon" />,
+    title: "Giocare",
+    icon: <IoGameController className="icon card-icon" />,
     text:
-      " Pickled hashtag portland pork belly cred selvage viral retro prism lomo narwhal cray selfies vegan lyft.",
+      "Immergiti in mondi virtuali incredibili, affronta sfide epiche e diventa un eroe leggendario nei tuoi giochi preferiti.",
   },
   {
-    title: "Insegnare",
-    icon: <IoPeopleCircleSharp className="icon card-icon" />,
+    title: "Collaborare",
+    icon: <IoPeople className="icon card-icon" />,
     text:
-      "iPhone banh mi you probably haven't heard of them fanny pack marfa four loko freegan. XOXO salvia twee whatever post-ironic blog",
+      "Unisciti ai tuoi amici in avventure cooperative, combatti fianco a fianco e condividi momenti indimenticabili di gioco di squadra.",
   },
   {
-    title: "Centralizzare",
-    icon: <ImDatabase className="icon card-icon" />,
+    title: "Gestire",
+    icon: <IoServer className="icon card-icon" />,
     text:
-      "Tilde post-ironic celiac franzen sustainable, vinyl polaroid direct trade tattooed vaporware kogi health goth cray echo park organic.",
+      "Ottimizza le tue risorse, costruisci e gestisci il tuo impero virtuale con abilità strategiche senza pari.",
   },
 ];
 
