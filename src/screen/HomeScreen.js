@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
+import { FaSearch } from 'react-icons/fa'
 import '../style/home_screen.scss'
 import styled from 'styled-components'
 import Lottie from 'react-lottie'
@@ -7,6 +8,9 @@ import { Link } from 'react-router-dom'
 import Hero from '../components/Hero'
 
 const HomeScreen = () => {
+
+  const [input, setInput] = useState("Assassin's Creed")
+
   return (
     <>
         <Hero>
@@ -39,6 +43,31 @@ const HomeScreen = () => {
           </StyledContent>
          
         </Hero>
+        <section>
+           <div className='search-bar'>
+                <div className='container'>
+                  <form>
+                    <label htmlFor='game'>
+                       <h4>Cerca il tuo videogame</h4>
+                    </label>
+                    <div className='d-flex '>
+                      <input
+                        type='text'
+                        id ='game'
+                        className='input'
+                        placeholder={input}
+                        value={input}
+                        onChange={(e) => setInput(e.target.value)}
+                      />
+                      <button className='btn_search'>
+                        <FaSearch className='icon'/>
+                      </button>
+                    </div>
+                  </form>
+                  <p className='result'>3 risultati</p>
+                </div>
+           </div>
+        </section>
     </>
   )
 }
