@@ -7,7 +7,7 @@ import { LinkComponent, SocialComponent } from '../utils/links';
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-nav">
-        <div className="container-fluid d-flex justify-content-around">
+        <div className="container-fluid d-flex justify-content-between">
             <Link to="/" >
                 <img src={logo_game} alt="logo" className="logo" />
             </Link>
