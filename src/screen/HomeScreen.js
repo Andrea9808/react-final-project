@@ -5,7 +5,6 @@ import styled from 'styled-components'
 import Lottie from 'react-lottie'
 import animationData from '../animation/gaming.json'
 import { Link } from 'react-router-dom'
-import useFetch from '../useFetch'
 import Hero from '../components/Hero'
 
 const HomeScreen = () => {
