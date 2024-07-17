@@ -1,0 +1,14 @@
+
+.btn_home_hero{
+    text-decoration: none;
+    border: 1px solid orange;
+    padding: 10px 30px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    color: orange;
+
+    &:hover{
+        background-color: orange;
+        color: white;
+    }
+}
