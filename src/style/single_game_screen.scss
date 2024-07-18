@@ -29,7 +29,6 @@ $light-color: #ecf0f1;
       
         ul {
             list-style-type: none;
-            padding-left: 0;
 
             li {
                 font-size: 1rem;
@@ -37,7 +36,7 @@ $light-color: #ecf0f1;
                 margin-bottom: 5px;
 
                 &:before {
-                    content: '\2022'; /* Bullet point */
+                    content: '\2022'; 
                     color: $secondary-color;
                     display: inline-block;
                     width: 1em;
