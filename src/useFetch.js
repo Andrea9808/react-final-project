@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const useFetch = () => {
     const [input, setInput] = useState('');
-    const [count, setCount] = useState(0); // Inizializza count a 0
+    const [count, setCount] = useState(0); // inizializzo count a 0
     const [games, setGames] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(false);
