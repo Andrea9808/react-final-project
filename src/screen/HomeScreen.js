@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
 import useFetch from '../useFetch';
 import '../style/home_screen.scss';
+import Loading from '../components/Loading';
 import animationData from '../animation/gaming.json';
 
 const HomeScreen = () => {
@@ -71,7 +72,7 @@ const HomeScreen = () => {
                                 </button>
                             </div>
                         </form>
-                        {isLoading && <p>Caricamento...</p>}
+                        {isLoading && <Loading />}
                         {isError && <p>Si è verificato un errore durante il caricamento dei dati.</p>}
                         <p className='result'>{count} risultati</p>
                     </div>
