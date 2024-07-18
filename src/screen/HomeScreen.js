@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa';
 import styled from 'styled-components';
 import Lottie from 'react-lottie';
@@ -8,21 +9,37 @@ import useFetch from '../useFetch';
 import '../style/home_screen.scss';
 import Loading from '../components/Loading';
 import animationData from '../animation/gaming.json';
+import { useGlobalContext } from '../context';
 
 const HomeScreen = () => {
     const { input, setInput, games, isLoading, isError, handleSearch, count } = useFetch();
     const [currentPage, setCurrentPage] = useState(1);
 
     // Numero di giochi da visualizzare per pagina
-    const itemsPerPage = 4; 
+    const itemsPerPage = 4;
 
-    
     const indexOfLastGame = currentPage * itemsPerPage;
     const indexOfFirstGame = indexOfLastGame - itemsPerPage;
     const currentGames = games.slice(indexOfFirstGame, indexOfLastGame);
 
     // Cambia pagina
-    const paginate = pageNumber => setCurrentPage(pageNumber);
+    const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+    const { getScrollPosition } = useGlobalContext();
+    const {deleteScrollPosition, scrollPosition } = useGlobalContext();
+    const navigate = useNavigate();
+
+    const goToGame = (_id) => {
+        getScrollPosition(window.pageYOffset);
+        navigate(`/game/${_id}`);
+    };
+
+    useEffect(() => {
+      if(scrollPosition) {
+        window.scrollTo(0, scrollPosition);
+        deleteScrollPosition();
+      }
+    })
 
     return (
         <>
@@ -56,7 +73,7 @@ const HomeScreen = () => {
                     <div className='container'>
                         <form onSubmit={(event) => handleSearch(event, input)}>
                             <label htmlFor='game'>
-                                <h4>Cerca il tuo videogioco</h4>
+                                <h4>Cerca il tuo videogioco e cliccaci sopra per saperne di più</h4>
                             </label>
                             <div className='d-flex'>
                                 <input
@@ -79,15 +96,15 @@ const HomeScreen = () => {
                 </div>
                 <div className='container'>
                     <div className='row mb-5'>
-                        {currentGames.map(game => (
+                        {currentGames.map((game) => (
                             <div className='col-12 col-md-6 col-lg-3 mb-4' key={game.id}>
-                                <div className='card'>
-                                {game.cover ? (
-                                    <img
-                                        src={`https:${game.cover.url.replace('t_thumb', 't_cover_big')}`}
-                                        className='card-img-top'
-                                        alt={`${game.name} cover`}
-                                    />
+                                <div className='card' onClick={() => goToGame(game.id)}> 
+                                    {game.cover ? (
+                                        <img
+                                            src={`https:${game.cover.url.replace('t_thumb', 't_cover_big')}`}
+                                            className='card-img-top'
+                                            alt={`${game.name} cover`}
+                                        />
                                     ) : (
                                         <div className='text-white'>Immagine non disponibile</div>
                                     )}
@@ -120,8 +137,8 @@ const StyledContent = styled.div`
 `;
 
 const Pagination = styled.div`
-   display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
     gap: 10px;
     justify-items: center;
     margin-top: 20px;
