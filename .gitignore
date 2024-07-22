@@ -27,3 +27,6 @@ yarn-error.log*
 # useFetch.js
 # Local Netlify folder
 .netlify
+
+#env
+.env
