@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# GameMaster
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+GameMaster è più di un semplice database: è la tua risorsa completa per esplorare, scoprire e immergerti nel vasto mondo dei videogiochi. Con una vasta collezione di titoli e informazioni dettagliate, GameMaster ti aiuta a trovare i giochi più recenti, a riscoprire i classici intramontabili e a seguire le ultime novità del settore.
 
-## Available Scripts
+## Tecnologie Utilizzate
 
-In the project directory, you can run:
+- **React.js**
+- **Bootstrap**
+- **Axios**
+- **React Router DOM**
+- **react-lottie**
+- **Sass (SCSS)**
+- **styled-components**
+- **Formspree**
 
-### `npm start`
+## Sviluppo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Il progetto è sviluppato in tre parti principali:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Home
 
-### `npm test`
+Nella homepage, gli utenti possono inserire il nome di un videogioco nell'input per cercare informazioni dettagliate su di esso.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Chi Siamo
 
-### `npm run build`
+La pagina di descrizione del team e di cosa facciamo. Qui troverai informazioni sul team di sviluppo e sulla missione di GameMaster.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Contattaci
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+In questa sezione è presente un form per contattare il team di GameMaster. Il form è realizzato utilizzando le API di Formspree.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Errore
 
-### `npm run eject`
+Pagina di errore se l'utente reindirizza il sito in un posto sbagliato.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Pagina Singola
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Cliccando sulla card, l'utente può visualizzare tutte le informazioni dettagliate sul gioco.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Struttura del Progetto
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **src/**
+  - **components/**: Contiene i componenti React riutilizzabili.
+  - **screens/**: Contiene le schermate principali (Home, Chi Siamo, Contattaci, Error e Single Game).
+  - **style/**: Contiene i file di stile SCSS.
+  - **utils/**: Contiene utility functions e custom hooks.
+  - **useFetch.js**: Custom hook per gestire il fetch dei dati dai server.
