@@ -2,10 +2,12 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import '../style/single_game_screen.scss';
 import useFetch from '../useFetch';
+import useTitle from '../utils/useTitle';
 
 const SingleGameScreen = () => {
     const { id } = useParams();
     const { isLoading, isError, games } = useFetch(id);
+    useTitle(games[0]?.name);
 
     // Check if games array is empty or undefined
     if (!games || games.length === 0) {

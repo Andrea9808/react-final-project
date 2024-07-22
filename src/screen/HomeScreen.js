@@ -10,6 +10,7 @@ import '../style/home_screen.scss';
 import Loading from '../components/Loading';
 import animationData from '../animation/gaming.json';
 import { useGlobalContext } from '../context';
+import useTitle from '../utils/useTitle';
 
 const HomeScreen = () => {
     const { input, setInput, games, isLoading, isError, handleSearch, count } = useFetch();
@@ -40,6 +41,8 @@ const HomeScreen = () => {
         deleteScrollPosition();
       }
     })
+
+    useTitle('Home');
 
     return (
         <>

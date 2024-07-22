@@ -2,8 +2,10 @@ import React from 'react';
 import '../style/contact_screen.scss';
 import Hero from '../components/Hero';
 import bg_contact from '../images/bg_contact.jpg';
+import useTitle from '../utils/useTitle';
 
 const ContactScreen = () => {
+  useTitle('Contattaci');
   return (
     
       <Hero img={bg_contact} disableOverlay>

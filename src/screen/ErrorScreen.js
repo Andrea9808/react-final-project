@@ -5,8 +5,12 @@ import animationData from '../animation/not-found.json';
 import '../style/errore.scss';
 import backgroundImage from '../images/bg-error.jpg'; 
 import { Link } from 'react-router-dom';
+import useTitle from '../utils/useTitle';
 
 const ErrorScreen = () => {
+
+  useTitle('Pagina non trovata');
+
   return (
     <Wrapper>
       <BackgroundImage />

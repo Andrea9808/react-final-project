@@ -5,8 +5,10 @@ import image from '../images/bg_about.jpg'
 import bg_team from '../images/bg_team.jpg'
 import Card from '../components/Card'
 import Hero from '../components/Hero'
+import useTitle from '../utils/useTitle'
 
 const AboutScreen = () => {
+  useTitle('Chi siamo')
   return (
     <>
       {/* HERO */}
