@@ -8,7 +8,7 @@ import {
   FaYoutubeSquare,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { useGlobalContext } from "../context";
+
 
 const links = [
   {

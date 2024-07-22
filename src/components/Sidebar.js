@@ -3,7 +3,7 @@ import { LinkComponent, SocialComponent } from "../utils/links";
 import { VscArrowSmallLeft } from "react-icons/vsc";
 import { FaBars } from 'react-icons/fa';
 import '../style/sidebar.scss';
-import { useGlobalContext } from "../context";
+
 
 const Sidebar = () => {
 

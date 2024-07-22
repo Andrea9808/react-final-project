@@ -1,5 +1,4 @@
 import React from 'react';
-import Loading from '../components/Loading';
 import { useParams, Link } from 'react-router-dom';
 import '../style/single_game_screen.scss';
 import useFetch from '../useFetch';

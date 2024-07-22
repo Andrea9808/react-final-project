@@ -1,5 +1,5 @@
 import { IoGameController, IoPeople, IoServer } from 'react-icons/io5';
-import { ImDatabase } from "react-icons/im";
+
 
 export const valueCards = [
   {
