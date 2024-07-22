@@ -102,7 +102,9 @@ const HomeScreen = () => {
                     <div className='row mb-5'>
                         {currentGames.map((game) => (
                             <div className='col-12 col-md-6 col-lg-3 mb-4' key={game.id}>
-                                <div className='card' onClick={() => goToGame(game.id)}> 
+                                <div className='card' onClick={() => goToGame(game.id)} style={{
+                                    cursor: 'pointer',
+                                }}> 
                                     {game.cover ? (
                                         <img
                                             src={`https:${game.cover.url.replace('t_thumb', 't_cover_big')}`}
