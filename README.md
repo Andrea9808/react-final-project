@@ -2,6 +2,8 @@
 
 GameMaster è più di un semplice database: è la tua risorsa completa per esplorare, scoprire e immergerti nel vasto mondo dei videogiochi. Con una vasta collezione di titoli e informazioni dettagliate, GameMaster ti aiuta a trovare i giochi più recenti, a riscoprire i classici intramontabili e a seguire le ultime novità del settore.
 
+Per visulizzare il sito web: https://gamemaster-project.netlify.app/
+
 ## Tecnologie Utilizzate
 
 - **React.js**
