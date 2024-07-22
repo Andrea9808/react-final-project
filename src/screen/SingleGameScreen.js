@@ -9,18 +9,44 @@ const SingleGameScreen = () => {
     const { isLoading, isError, games } = useFetch(id);
     useTitle(games[0]?.name);
 
-    // Check if games array is empty or undefined
-    if (!games || games.length === 0) {
+    if (isLoading) {
+        return (
+            <div className="vh-100 d-flex justify-content-center flex-column">
+                <div className="text-center m-5">
+                <p>Caricamento</p>
+                    <div className="loading-dots">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+    if (isError) {
         return (
             <div className="container mt-5">
                 <div className="text-center m-5">
+                    <p>Si è verificato un errore durante il caricamento dei dati.</p>
                     <Link to="/" className="btn_home_hero">Torna alla Home</Link>
                 </div>
             </div>
         );
     }
 
-    const game = games[0]; // Safe to access the first element now
+    if (!games || games.length === 0) {
+        return (
+            <div className="container mt-5">
+                <div className="text-center m-5">
+                    <p>Non sono stati trovati giochi.</p>
+                    <Link to="/" className="btn_home_hero">Torna alla Home</Link>
+                </div>
+            </div>
+        );
+    }
+
+    const game = games[0]; 
     const { name, summary, videos, platforms } = game;
 
     return (
@@ -28,8 +54,6 @@ const SingleGameScreen = () => {
             <div className="text-center m-5">
                 <Link to="/" className="btn_home_hero">Torna alla Home</Link>
             </div>
-            {isLoading && <h1>Caricamento...</h1>}
-            {isError && <p>Si è verificato un errore durante il caricamento dei dati.</p>}
             <div className="row">
                 <div className="col-md-6">
                     <div className="card single_card">
