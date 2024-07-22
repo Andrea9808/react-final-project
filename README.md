@@ -17,7 +17,7 @@ Per visulizzare il sito web: https://gamemaster-project.netlify.app/
 
 ## Sviluppo
 
-Il progetto è sviluppato in tre parti principali:
+Il progetto è sviluppato in cinque parti principali:
 
 ### Home
 
